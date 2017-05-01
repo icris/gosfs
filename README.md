@@ -4,14 +4,14 @@ No css, no js, no nothing. Just listing files.
 
 #### run on local device
 ```
-$ go build -o /usr/local/bin/sfs
-$ sfs [-path PATH] [-port PORT]
+$ go install
+$ sfs [-path PATH, default to .] [-port PORT, default to 8000]
 ```
 
 #### run with docker
 ```
-$ build -t sfs .
-$ docker run -it --rm -p 80:8000 -v /path/to/server/root:/data sfs
+$ make docker
+$ docker run -it --rm -p 80:8000 -v /path/to/server/root:/data gosfs
 ```
 
 #### run pre-built docker image from docker hub
